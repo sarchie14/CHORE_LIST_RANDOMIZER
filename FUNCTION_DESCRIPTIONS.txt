@@ -1,0 +1,76 @@
+									FUNCTION_DESCRIPTIONS
+
+new_chore(chore)
+	- PRECONDITION: Prompt is displayed for user to type the name of chore
+	  	to be added.
+	- CONDITION: Check to see if there are existing chores. If not then
+	  	create a new list of chores and add the chore as the first.
+	- CONDITION: If list of chores exist, add the chore to the list.
+	- POSTCONDITION: New chore is added to the existing chores or a new
+	  	list.
+
+remove_chore(chore)
+	-PRECONDITION: Prompt is displayed for user to type the name of chore
+		to be deleted.
+	- CONDITION: If there is no list, return null.
+	- CONDITION: If list exists, search through list.
+			- If no chore exists, return null with a message
+			  stating there is no chore in the list.
+			- If chore exists, delete the chore and send message
+			  to the user stating the chore has been deleted.
+	-POSTCONDITION: - Chore is removed from the list, or returned null.
+			- Message will be sent stating the status of the
+			  request.
+
+enter_member(member)
+	- PRECONDITION: Prompt is displayed for user to type in the name of a
+		member to be added to the program.
+	- CONDITION: Check to see if there are existing members.
+			- If there is no list of members, create a new list of
+			  members and then add the member.
+			- If list of members exist, add the member to the
+			  list.
+	-POSTCONDITION: Member is added to a list.
+
+remove_member(member)
+	- PRECONDITION: Prompt is displayed for user to type in the name of
+	  	the member that they want removed from the list of members.
+	- CONDITION: If list of members does not exist, return null.
+	- CONDITION: If list of members does exist, search through the members.
+			- If the member is not in the list, return null with
+			  message stating there is no member in the list.
+			- If the member exists in the list, delete the member
+			  and send message back to user stating the member has
+			  been removed.
+	- POSTCONDITION: Member is removed from the list, or function returns
+	  	null with message stating the status of the request.
+
+list_chores()
+	PRECONDITION: User selects the option to list the chores.
+	CONDITION: Display each chore back to the user.
+	POSTCONDITION: Each chore is displayed on it's own line. If list is
+		null, a message is sent to user stating there are no chores.
+
+list_members()
+	PRECONDITION: User selects the option to list the members.
+	CONDITION: Display each user alphabetically on it's own line.
+	POSTCONDITION: List of members is displayed.
+
+assign_chores_to_members()
+	PRECONDITION: User selects the option to have each chore assigned
+		randomly to each member.
+	CONDITION: Chores must be evenly split between the members.
+	CONDITION: If either chores or members are null then return nulll and
+		tell user "unable to assign chores to members " and then the
+		reason why.
+	CONDITION: For each chore, assign it randomly to a member. Send
+		message to back stating chores have been assigned.
+	POSTCONDITION: All member's have chores. 
+
+save_list_to document()
+	- PRECONDITION: User wants to save the randomly generated list to a txt
+		doc.
+	- CONDITION: Print each member on a line of its own, with their list
+	  	of chores below their name to a txt doc.
+	- POSTCONDITION: A txt doc of the list of chores is saved for the user
+	  	to keep.
